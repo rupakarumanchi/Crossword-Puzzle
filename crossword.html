@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset = "UTF-8">
+    <title> My Crossword </title>
+    <link rel="stylesheet" href="crossword_style.css">
+  </head>
+  <body>
+
+        <h1> Can you solve this? </h1>    
+
+        <h2 style="font-size: large;"> At any time during filling the puzzle, press 'Enter' to check the validity of your anwers. 
+        </h2>
+        <h2 style="font-size: large;">If the box changes to green you are correct.</h2>
+
+        <h3> Get crackin' ! </h3>
+
+        <p style="font-size: small;"> Note: Tap the mouse on the cell you want to fill & type only in upper case </p>
+
+
+
+    <style>
+      .buttons001 {
+        border: 1px solid black;
+        background-color: white;
+        color: black;
+        text-align: center;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        cursor: context-menu;
+      }
+      
+      .numberedbuttons {
+        border: 1px solid black;
+        color: black;
+        text-align: center;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        cursor: context-menu;
+        counter-increment: value;
+      }
+
+
+      .buttons002 {
+        border: 1px solid black;
+        background-color: black;
+        color: black;
+        text-align: center;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        cursor: context-menu;
+      }
+      
+      
+      </style>
+      <!-- the boxes (buttons001 white, buttons002 black) -->
+
+  <div class="grid">
+  <div contenteditable="true" class="numberedbuttons"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names101"></div><div contenteditable="true" class="numberedbuttons"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names102"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names103"></div><div contenteditable="true" class="numberedbuttons"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names104"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names105"></div><div contenteditable="true" class="numberedbuttons"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names106"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names107"></div></br><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required="required"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names202"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names204"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names206"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div></br><div contenteditable="true" class="numberedbuttons"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names301"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names302"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names304"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="numberedbuttons"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names306"></div><div contenteditable="true" class="numberedbuttons"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names307"></div></br><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="numberedbuttons"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names402"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names403"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names404"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names407"></div></br><div contenteditable="true" class="numberedbuttons"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names501"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="numberedbuttons"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names504"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names505"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names506"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names507"></div></br><div contenteditable="true" class="numberedbuttons"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names601"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names602"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="numberedbuttons"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names604"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names605"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names607"></div></br><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names701"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="buttons001"/><input onkeydown="keyCode(event)" class="buttons001" maxlength="1" minlength="1" required="required" id="names704"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div><div contenteditable="true" class="buttons002"/><input onkeydown="keyCode(event)" class="buttons002" maxlength="1" minlength="1" required=“required"></div>
+</div>
+
+
+      <p id="score001"> Your score: 0 out of 31</p>
+
+                  <!-- congrats msg -->
+      <p id="message" style="font-weight: bold;"></p>
+
+          <!-- var m101 = input letter; w101 = 0/1 -->
+            <!-- b = 13 means ENTER -->
+
+      <script>
+        function keyCode(event) {
+          var m101 = names101.value; var m102 = names102.value;
+          var m103 = names103.value; var m104 = names104.value;
+          var m105 = names105.value; var m106 = names106.value;
+          var m107 = names107.value; var m202 = names202.value;
+          var m204 = names204.value; var m206 = names206.value;
+          var m301 = names301.value; var m302 = names302.value;
+          var m304 = names304.value; var m306 = names306.value;
+          var m307 = names307.value; var m402 = names402.value;
+          var m403 = names403.value; var m404 = names404.value;
+          var m407 = names407.value; var m501 = names501.value;
+          var m504 = names504.value; var m505 = names505.value;
+          var m506 = names506.value; var m507 = names507.value;
+          var m601 = names601.value; var m602 = names602.value;
+          var m604 = names604.value; var m605 = names605.value;
+          var m607 = names607.value; var m701 = names701.value;
+          var m704 = names704.value; 
+
+
+          var w101 = 0; var w102 = 0; var w103 = 0; var w104 = 0; 
+          var w105 = 0; var w106 = 0; var w107 = 0; var w202 = 0; 
+          var w204 = 0; var w206 = 0; var w301 = 0; var w302 = 0;
+          var w304 = 0; var w306 = 0; var w307 = 0; var w402 = 0;
+          var w403 = 0; var w404 = 0; var w407 = 0; var w501 = 0;
+          var w504 = 0; var w505 = 0; var w506 = 0; var w507 = 0;
+          var w601 = 0; var w602 = 0; var w604 = 0; var w605 = 0;
+          var w607 = 0; var w701 = 0; var w704 = 0; 
+
+          var b = event.keyCode;
+
+
+          if (b == 13 && m101 == "G") {
+            w101 = 1;
+            document.getElementById("names101").value = m101;
+            document.getElementById("names101").style.backgroundColor="#5cd65c";
+          }
+
+          if (b == 13 && m102 == "O") {
+            w102 = 1;
+            document.getElementById("names102").value = m102;
+            document.getElementById("names102").style.backgroundColor="#5cd65c";
+
+          }
+
+          if (b == 13 && m103 == "S") {
+            w103 = 1;
+            document.getElementById("names103").value = m103;
+            document.getElementById("names103").style.backgroundColor="#5cd65c";
+          }
+
+          if (b == 13 && m104 == "L") {
+            w104 = 1;
+            document.getElementById("names104").value = m104;
+            document.getElementById("names104").style.backgroundColor="#5cd65c";
+          }
+
+          if (b == 13 && m105 == "I") {
+            w105 = 1;
+            document.getElementById("names105").value = m105;
+            document.getElementById("names105").style.backgroundColor="#5cd65c";
+
+          }
+
+          if (b == 13 && m106 == "N") {
+            w106 = 1;
+            document.getElementById("names106").value = m106;
+            document.getElementById("names106").style.backgroundColor="#5cd65c";
+
+          }
+
+          if (b == 13 && m107 == "G") {
+            w107 = 1;
+            document.getElementById("names107").value = m107;
+            document.getElementById("names107").style.backgroundColor="#5cd65c";    
+          }
+
+          if (b == 13 && m202 == "O") {
+            w202 = 1;
+            document.getElementById("names202").value = m202;
+            document.getElementById("names202").style.backgroundColor="#5cd65c";     
+          }          
+
+          if (b == 13 && m204 == "A") {
+            w204 = 1;
+            document.getElementById("names204").value = m204;
+            document.getElementById("names204").style.backgroundColor="#5cd65c";
+          }
+
+          if (b == 13 && m206 == "A") {
+            w206 = 1;
+            document.getElementById("names206").value = m206;
+            document.getElementById("names206").style.backgroundColor="#5cd65c";
+          }
+
+          if (b == 13 && m301 == "I") {
+            w301 = 1;
+            document.getElementById("names301").value = m301;
+            document.getElementById("names301").style.backgroundColor="#5cd65c";
+          }
+
+          if (b == 13 && m302 == "P") {
+            w302 = 1;
+            document.getElementById("names302").value = m302;
+            document.getElementById("names302").style.backgroundColor="#5cd65c";
+          }
+
+          if (b == 13 && m304 == "M") {
+            w304 = 1;
+            document.getElementById("names304").value = m304;
+            document.getElementById("names304").style.backgroundColor="#5cd65c";
+          }
+
+          if (b == 13 && m306 == "N") {
+            w306 = 1;
+            document.getElementById("names306").value = m306;
+            document.getElementById("names306").style.backgroundColor="#5cd65c";
+          }   
+
+          if (b == 13 && m307 == "O") {
+            w307 = 1;
+            document.getElementById("names307").value = m307;
+            document.getElementById("names307").style.backgroundColor="#5cd65c";
+          }             
+
+          if (b == 13 && m402 == "S") {
+            w402 = 1;
+            document.getElementById("names402").value = m402;
+            document.getElementById("names402").style.backgroundColor="#5cd65c";
+          }
+
+          if (b == 13 && m403 == "U") {
+            w403 = 1;
+            document.getElementById("names403").value = m403;
+            document.getElementById("names403").style.backgroundColor="#5cd65c";
+          }
+
+          if (b == 13 && m404 == "B") {
+            w404 = 1;
+            document.getElementById("names404").value = m404;
+            document.getElementById("names404").style.backgroundColor="#5cd65c";
+          }  
+
+          if (b == 13 && m407 == "V") {
+            w407 = 1;
+            document.getElementById("names407").value = m407;
+            document.getElementById("names407").style.backgroundColor="#5cd65c";
+          }
+
+          if (b == 13 && m501 == "T") {
+            w501 = 1;
+            document.getElementById("names501").value = m501;
+            document.getElementById("names501").style.backgroundColor="#5cd65c";
+          }          
+
+          if (b == 13 && m504 == "D") {
+            w504 = 1;
+            document.getElementById("names504").value = m504;
+            document.getElementById("names504").style.backgroundColor="#5cd65c";
+          }
+
+          if (b == 13 && m505 == "A") {
+            w505 = 1;
+            document.getElementById("names505").value = m505;
+            document.getElementById("names505").style.backgroundColor="#5cd65c";
+          }          
+
+          if (b == 13 && m506 == "T") {
+            w506 = 1;
+            document.getElementById("names506").value = m506;
+            document.getElementById("names506").style.backgroundColor="#5cd65c";
+          } 
+
+          if (b == 13 && m507 == "E") {
+            w507 = 1;
+            document.getElementById("names507").value = m507;
+            document.getElementById("names507").style.backgroundColor="#5cd65c";
+          } 
+
+          if (b == 13 && m601 == "R") {
+            w601 = 1;
+            document.getElementById("names601").value = m601;
+            document.getElementById("names601").style.backgroundColor="#5cd65c";
+          }           
+
+          if (b == 13 && m602 == "E") {
+            w602 = 1;
+            document.getElementById("names602").value = m602;
+            document.getElementById("names602").style.backgroundColor="#5cd65c";
+          }    
+
+          if (b == 13 && m604 == "A") {
+            w604 = 1;
+            document.getElementById("names604").value = m604;
+            document.getElementById("names604").style.backgroundColor="#5cd65c";
+          }   
+
+          if (b == 13 && m605 == "B") {
+            w605 = 1;
+            document.getElementById("names605").value = m605;
+            document.getElementById("names605").style.backgroundColor="#5cd65c";
+          }   
+
+          if (b == 13 && m607 == "R") {
+            w607 = 1;
+            document.getElementById("names607").value = m607;
+            document.getElementById("names607").style.backgroundColor="#5cd65c";
+          }    
+
+          if (b == 13 && m701 == "Y") {
+            w701 = 1;
+            document.getElementById("names701").value = m701;
+            document.getElementById("names701").style.backgroundColor="#5cd65c";
+          }      
+
+          if (b == 13 && m704 == "S") {
+            w704 = 1;
+            document.getElementById("names704").value = m704;
+            document.getElementById("names704").style.backgroundColor="#5cd65c";
+          }                                    
+
+          var q = w101 + w102 + w103 + w104 + w105 + w106 + w107 + w202 + w204 
+          + w206 + w301 + w302 + w304 + w306 + w307 + w402 + w403 + w404 + w407 + w501 + w504 + w505 + w506+ w507 + w601 + w602 + w604 + w605 + w607 + w701 + w704;
+          
+          document.getElementById("score001").innerHTML = "Your score: " + q + " out of 31";
+
+          if (q == "31") {
+          document.getElementById("message").innerHTML = "Congratulations!";
+        }
+        }
+
+      </script>
+
+<h3> Clues </h3>
+<div class="Clues-List-across">Across</div>
+<div class="clue1"><p> 
+1. Creator of Java (7)</p>
+<p>5. What would you need to know if you are client trying to connect to a server? (Apart from port no.) (2) </p>
+ <p> 6. Short form of number (2) </p>
+ <p> 8. Fill in the blank: s = puzzle; s.__string(0,3); output: puz (3) </p>
+ <p> 10. getTime() method is part of what class? (4) </p>
+ <p> 11. Fill in the black: J _ _. You need this for combining JVM, core classes etc to make your program run (2) </p>
+ <p> 12. Output of "A" + "B" (2) </p>
+
+ <div class="Clues-List-down">Down</div>
+<div><p> 2. Inheritance, Polymorphism, Encapsulation and Abstraction are these concepts (acronym) (4)</p>
+<p> 3. Instances of functional interfaces (7) </p>
+<p> 4. Not a Number (3) </p>
+<p> 7. Method __loading (4) </p>
+<p> 9. ___ and catch! (3) </p>
+</br></div>
+
+
+
+    </body>
+    </html>
